@@ -1,0 +1,34 @@
+.tabela
+{
+    text-align: left;
+    margin: auto;
+    width: 90%;
+    color: white;
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+thead{
+    background-color: #FE5000;
+    text-align: center;
+}
+
+.tabela td{
+    border-bottom: 2px solid #FE5000;
+
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.adjacente{
+    background-color: white;
+    color: black;
+}
+
+.tabela tr:hover{
+    background-color: green;
+}
+

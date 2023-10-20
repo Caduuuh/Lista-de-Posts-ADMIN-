@@ -1,0 +1,109 @@
+.modalDelete{
+        display: none;
+        position: fixed;
+        overflow: auto;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: rgb(0 0 0/ .5);
+}
+
+.modalNewPost{
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/ .5);
+    z-index: 0;
+}
+.modalNewPost-content{
+    margin-left: 20%;
+    background-color: white;
+    margin-top: 10vh;
+    height: 80vh;
+    width: 60%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modalEditPost{
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/ .5);
+    z-index: 0;
+}
+.modalEditPost-content{
+    margin-left: 20%;
+    background-color: white;
+    margin-top: 10vh;
+    height: 80vh;
+    width: 60%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modalViewPost{
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/ .5);
+    z-index: 0;
+}
+.modalViewPost-content{
+    margin-left: 20%;
+    background-color: white;
+    margin-top: 10vh;
+    height: 80vh;
+    width: 60%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.modalDelete-content{
+    margin-left: 20%;
+    background-color: white;
+    width: 60%;
+    margin-top: 20vh;
+    height: 60vh;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.modal-head{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+}
+
+.input-boxtitulo input{
+    width: 50%;
+    border: 1;
+    outline: 1;
+    font-size: 24px;
+
+}
+
+.input-boxcontent textarea{
+    width: 80%;
+    border: 1;
+    outline: 1;
+    font-size: 24px;
+
+}
