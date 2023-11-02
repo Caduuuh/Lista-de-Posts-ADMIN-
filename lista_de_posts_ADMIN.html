@@ -16,10 +16,9 @@
     </head>
 
     <body>
-        
-        <div class="titulos">
-            <h1>Lista de Posts</h1>
 
+        <div>
+            <img src="img/logoFundoRemovido.png" class="logo" alt="Logo">
         </div>
 
         <div class="newPostBox" id="newPostBox">
@@ -37,166 +36,124 @@
 
                 <tr>
                     <th>Post</th>
-                    <th colspan="4">Ação</th>
+                    <th>Data</th>
+                    <th colspan="3">Ação</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td width="60%" class="Posts">Nome do Post</td>
-                    <td class="date">20/10/2023</td>
-                    <td><img src="img/visualizar.png" class="icon" alt="VisualizarIcon">
+                <tr class="linhaDaTabela">
+                    <td width="60%" class="Posts">Nome do Post e descrição</td>
+                    <td class="date">27/10/2023</td>
+                    <td>
                     <button type="button" class="button yellow" id="view" >Visualizar</button></td>
-                    <td><img src="img/editar.png" class="icon" alt="EditIcon">
+                    <td>
                     <button type="button" class="button green" id="edit">Editar</button></td>
-                    <td><img src="img/excluir.png" class="icon" alt="DeleteIcon">
+                    <td>
                     <button type="button" class="button red" id="delete" >Excluir</button></td>
                     
                 </tr>
                 <tr class="adjacente">
-                    <td width="70%" class="Posts">Nome do Post</td>
-                    <td class="date">20/10/2023</td>
-                    <td><img src="img/visualizar.png" class="icon" alt="VisualizarIcon">
+                    <td width="70%" class="Posts">Nome do Post e descrição</td>
+                    <td class="date">27/10/2023</td>
+                    <td>
                     <button type="button" class="button yellow" id="visualizar" >Visualizar</button></td>
-                    <td><img src="img/editar.png" class="icon" alt="EditIcon">
+                    <td>
                     <button type="button" class="button green" id="edit">Editar</button></td>
-                    <td><img src="img/excluir.png" class="icon" alt="DeleteIcon">
+                    <td>
                     <button type="button" class="button red" id="delete" >Excluir</button></td>
                 </tr>
-                <tr>
-                    <td width="70%" class="Posts">Nome do Post</td>
+                <tr class="linhaDaTabela">
+                    <td width="70%" class="Posts">Nome do Post e descrição</td>
                     <td class="date">20/10/2023</td>
-                    <td><img src="img/visualizar.png" class="icon" alt="VisualizarIcon">
+                    <td>
                     <button type="button" class="button yellow" id="visualizar" >Visualizar</button></td>
-                    <td><img src="img/editar.png" class="icon" alt="EditIcon">
+                    <td>
                     <button type="button" class="button green" id="edit">Editar</button></td>
-                    <td><img src="img/excluir.png" class="icon" alt="DeleteIcon">
+                    <td>
                     <button type="button" class="button red" id="delete" >Excluir</button></td>
                 </tr>
                 <tr class="adjacente">
-                    <td width="70%" class="Posts">Nome do Post</td>
-                    <td class="date">20/10/2023</td>
-                    <td><img src="img/visualizar.png" class="icon" alt="VisualizarIcon">
+                    <td width="70%" class="Posts">Nome do Post e descrição</td>
+                    <td class="date">27/10/2023</td>
+                    <td>
                     <button type="button" class="button yellow" id="visualizar" >Visualizar</button></td>
-                    <td><img src="img/editar.png" class="icon" alt="EditIcon">
+                    <td>
                     <button type="button" class="button green" id="edit">Editar</button></td>
-                    <td><img src="img/excluir.png" class="icon" alt="DeleteIcon">
+                    <td>
                     <button type="button" class="button red" id="delete" >Excluir</button></td>
                 </tr>
-                <tr>
-                    <td width="70%" class="Posts">Nome do Post</td>
-                    <td class="date">20/10/2023</td>
-                    <td><img src="img/visualizar.png" class="icon" alt="VisualizarIcon">
+                <tr class="linhaDaTabela">
+                    <td width="70%" class="Posts">Nome do Post e descrição</td>
+                    <td class="date">27/10/2023</td>
+                    <td>
                     <button type="button" class="button yellow" id="visualizar" >Visualizar</button></td>
-                    <td><img src="img/editar.png" class="icon" alt="EditIcon">
+                    <td>
                     <button type="button" class="button green" id="edit">Editar</button></td>
-                    <td><img src="img/excluir.png" class="icon" alt="DeleteIcon">
+                    <td>
                     <button type="button" class="button red" id="delete" >Excluir</button></td>
 
             </tbody>
         </table>
 
+        <div class="modal" id="modal">
 
-        <div id="modalNewPost" class="modalNewPost">
-    
-            <div class="modalNewPost-content">
-
-                <div class="modal-head">
-                    <h2>Criar Novo Post</h2>
-                    <span class = "closeNewPost" id="closeNewPost">&times;</span>
-                </div>
-
-                <div>
-                    <h3>Título do Post</h3>
-                        <div class="input-boxtitulo">
-                            <input id="newTitlePost" type="text" name="TituloNovoPost" placeholder="Dgite o Título do Novo Post">
-                        </div>
-                </div>
-
-                <div>
-                    <h3>Conteúdo do post</h3>
-                        <div class="input-boxcontent">
-                            <textarea rows="15" id="newContentPost" name="ConteudoNovoPost"></textarea>
-                        </div>
-                </div>
-
+            <div class="modal-content" id="modal-delete-user">
+                <header class="modal-header">
+                    <h2>Tem certeza que deseja excluir este post?</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <footer class="modal-footer del">
+                    <button id="salvar" class="button yellow">Confirmar</button>
+                    <button id="cancelar" class="button cancel">Cancelar</button>
+                </footer>
             </div>
 
-        </div>
-
-        <div id="modalViewPost" class="modalViewPost">
-    
-            <div class="modalViewPost-content">
-
-                <div class="modal-head">
-                    <h2>Nome do Post</h2>
-                    <span class = "closeViewPost" id="closeViewPost">&times;</span>
-                </div>
-
-                <div>
-                    <h3>Conteúdo do post</h3>
-                        <div class="input-boxcontent">
-                            <textarea rows="15" id="newContentPost" name="ConteudoNovoPost"></textarea>
-                        </div>
-                </div>
-
+            <div class="modal-content" id="modal-new-user">
+                <header class="modal-header">
+                    <h2>Novo Post</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="nome" required>
+                    <input type="email" id="email" class="modal-field" placeholder="e-mail" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button yellow">Salvar</button>
+                    <button id="cancelar" class="button cancel">Cancelar</button>
+                </footer>
             </div>
 
-        </div>
+            <div class="modal-content" id="modal-manage-user">
+                <header class="modal-header">
+                    <h2>Editar/Visualizar Post</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="nome" required>
+                    <input type="email" id="email" class="modal-field" placeholder="e-mail" required>
 
-        <div id="modalEditPost" class="modalEditPost">
-    
-            <div class="modalEditPost-content">
-
-                <div class="modal-head">
-                    <h2>Editar Post</h2>
-                    <span class = "closeEditPost" id="closeEditPost">&times;</span>
-                </div>
-
-                <div>
-                    <h3>Editar Título do Post</h3>
-                        <div class="input-boxtitulo">
-                            <input id="newTitlePost" type="text" name="TituloNovoPost" placeholder="Dgite o Título do Novo Post">
-                        </div>
-                </div>
-
-                <div>
-                    <h3>Editar Conteúdo do post</h3>
-                        <div class="input-boxcontent">
-                            <textarea rows="15" id="newContentPost" name="ConteudoNovoPost"></textarea>
-                        </div>
-                </div>
-
+                    
+                    <input type="password" id="password" class="modal-field" placeholder="password" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button yellow">Salvar</button>
+                    <button id="cancelar" class="button cancel">Cancelar</button>
+                </footer>
             </div>
-
         </div>
 
 
 
-       <div id="modalDelete" class="modalDelete">
-
-           <div class="modalDelete-content">
-
-               <div class="modal-head">
-                <h2>Você tem certeza que deseja excluir este post?</h2>
-                <span class = "closeDelete" id="closeDelete">&times;</span>
-               </div>
-
-
-                <h3>Nome do Post</h3>
-
-                <div>
-                     <ul class="SimNão">
-                        <li><button class="Sim" id="btsim" onclick="openSim()">Sim</button></li>
-                        <li><button class="Não" id="btnao" onclick="openNao()">Não</button></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
 
 
 
+
+
+
+    <footer>
+        Think Outside The Cube
+    </footer>
 
     </body>
     <script src="js/scripts.js"></script>

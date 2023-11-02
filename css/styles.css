@@ -1,53 +1,25 @@
 body {
     margin-top: 100px;
-    background-color: black;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    background-image: url(../img/Fundo.png);
-    background-repeat: no-repeat;
-    background-size:cover;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(34,12,0,1) 0%, rgba(23,8,0,1) 65%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);
+    margin: 0;
+    padding: 0;
 
 }
 
+.logo {
+    text-align: center;
+    width: 170px;
+}
 
-.titulos{
+footer{
     color: white;
-} 
-
-.SimNão{    
-    width: 103vh;
-    position:absolute;
-    bottom: 5%;
-    margin: 0px;
-    padding-bottom: 20%;
-}
-
-.SimNão ul{    
+    width:100%;
     text-align: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-.SimNão li{
-
-    font-size: 36px;
-    display: inline-block;
-    padding-left: 150px;
-    padding-right: 150px;
-}
-
-.Sim{
-    font-size: 45px;
-    color: #009a44;
-    font-family: 'Orbitron', sans-serif;
-    background-color: transparent;
-    border:transparent;
-}
-
-.Não{
-    font-size: 45px;
-    color: #b60c2f;
-    font-family: 'Orbitron', sans-serif;
-    background-color: transparent;
-    border:transparent;
+    font-weight: 200;
+    position: absolute;
+    bottom: 30px;
+    font-size: 18px;
 }

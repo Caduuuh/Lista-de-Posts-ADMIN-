@@ -1,46 +1,70 @@
-var btnNewPost = document.getElementById("CriarPost");
-var btnViewPost = document.getElementById("view");
-var btnEditPost = document.getElementById("edit");
-var btnDeletePost = document.getElementById("delete");
+var newUser = document.getElementById('CriarPost');
+var editUser = document.querySelectorAll('[id^="edit"]')
+var showUser = document.querySelectorAll('[id^="visualizar"]')
+var deleteUser = document.querySelectorAll('[id^="delete"]')
 
-var modalDelete = document.getElementById("modalDelete");
-var modalNewPost = document.getElementById("modalNewPost");
-var newPostBox = document.getElementById("newPostBox");
-var modalEditPost = document.getElementById("modalEditPost");
-var modalViewPost = document.getElementById("modalViewPost");
+var modalBox = document.getElementById('modal');
+var modalClose1 = document.querySelectorAll('[id^="cancelar"]')
+var modalX = document.querySelectorAll('[id^="modalClose"]')
+var modalNewUser = document.getElementById('modal-new-user');
+var modalManageUser = document.getElementById('modal-manage-user');
+var modalDeleteUser = document.getElementById('modal-delete-user');
 
+newUser.addEventListener('click', () => {manageModal('newUser')});
 
-var closeDelete = document.getElementById("closeDelete")[0];
-var closeNewPost = document.getElementById("closeNewPost")[0];
+function closeModals(){
+   let modalElements = document.querySelectorAll('[id^="modal-"]');
 
-btnViewPost.onclick=function(){
-    modalViewPost.style.display = "block";
-    newPostBox.style.display = "none";
+   modalElements.forEach(element => {
+       element.classList = 'modal-content';
+     });
 }
 
-btnEditPost.onclick=function(){
-    modalEditPost.style.display = "block";
-    newPostBox.style.display = "none";
-}
+modalClose1.forEach(element => {
+   element.addEventListener('click', () => {
+       manageModal('close');
+       closeModals();
+   });
+})
 
-btnNewPost.onclick =function(){
-    modalNewPost.style.display = "block";
-    newPostBox.style.display = "none";
+modalX.forEach(element => {
+   element.addEventListener('click', () => {
+       manageModal('close');
+       closeModals();
+   });
+})
 
-}
+editUser.forEach(element => {
+   element.addEventListener('click', () => {manageModal('showUser') 
+});
+});
+
+showUser.forEach(element => {
+   element.addEventListener('click', () => {manageModal('showUser') 
+});
+});
+
+deleteUser.forEach(element => {
+   element.addEventListener('click', () => {manageModal('deleteUser') 
+});
+});
 
 
-btnDeletePost.onclick = function(){
-    modalDelete.style.display = "block";
-    newPostBox.style.display = "none";
-}
 
-closeDelete.onclick = function(){
-    modalDelete.style.display = "none";
-}
-
-window.onclick = function(event){
-    if(event.target == modalDelete){
-        modalDelete.style.display = "none";
-    }
+function manageModal(typeModal){
+   modalBox.classList.toggle('active')
+   switch(typeModal){
+       case 'newUser':
+           modalNewUser.classList.toggle('modal-content-active');
+           break;
+       case 'showUser':
+           modalManageUser.classList.toggle('modal-content-active');
+           break;
+       case 'deleteUser':
+           modalDeleteUser.classList.toggle('modal-content-active');
+           break;
+       case 'close':
+           break;
+       default:
+   }
 }
